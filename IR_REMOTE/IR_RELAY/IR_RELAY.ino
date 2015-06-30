@@ -12,16 +12,16 @@ int RECV_PIN = 11;
 int RELAY_PIN = 12;
 int DELAY_TIME = 500;
 
-IRrecv irrecv(RECV_PIN);
+IRrecv irrecv(RECV_PIN);  
 
 decode_results results;
 
 void setup()
-{
-  
-  Serial.begin(9600);
+{  
+  Serial.begin( 9600);
   irrecv.enableIRIn(); // Start the receiver
   pinMode( RELAY_PIN, OUTPUT);
+  digitalWrite( RELAY_PIN, LOW);
 }
 
 void loop() {
